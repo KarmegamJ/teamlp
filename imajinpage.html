@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>imajin website</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link href=".output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Felipa&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="paralax.js" />
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .montserrat {
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+      }
+      .gradient-text {
+        background: linear-gradient(
+          to right,
+          #7953cd 20%,
+          #00affa 30%,
+          #0190cd 70%,
+          #764ada 80%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500% auto;
+        animation: textShine 5s ease-in-out infinite alternate;
+      }
+      @keyframes textShine {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+      .k {
+        position: absolute;
+        top: 332px;
+        max-width: 600px;
+      }
+      .B {
+        transform: translate(-50%, -50%);
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20px;
+        position: relative;
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #007bff;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+      }
+    </style>
+  </head>
+  <body class="bg-[#160b41]">
+    <nav>
+      <div
+        class="flex justify-between mx-3 my-4 font-light text-white md:items-center md:mx-16 md:my-6 montserrat"
+      >
+        <div class="flex justify-center gap-2 md:items-center">
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="h-[25px] md:h-[40px] w-[25px] md:w-[40px]"
+          />
+          <p class="uppercase text-[20px] md:text-[26px] font-normal">IMAJIN</p>
+        </div>
+        <div
+          class="text-base navlink md:static absolute w-full md:w-auto md:block left-0 top-[-100%] md:min-h-fit min-h-[60vh]"
+        >
+          <ul
+            class="flex flex-col w-full gap-5 px-4 py-4 bg-black md:bg-transparent md:flex-row md:gap-6"
+          >
+            <li><a href="">About</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Develop</a></li>
+            <li><a href="">Community</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <div class="items-center gap-4 font-semibold md:flex md:flex-row">
+          <p
+            class="uppercase hidden border md:flex px-4 py-1 rounded-2xl hover:text-[#311B92] cursor-pointer border-transparent hover:bg-[#D1C4E9] hover:border-white hover:stroke-white"
+          >
+            Login
+          </p>
+          <p
+            class="px-4 py-1 hidden md:flex rounded-2xl cursor-pointer hover:text-white hover:bg-[#311B92] border border-transparent hover:border-white bg-[#D1C4E9] w-fit text-[#311B92]"
+          >
+            REGISTER
+          </p>
+          <img
+            src="images/settingicon.svg"
+            alt="setting"
+            class="hidden w-6 md:flex"
+          />
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div>
+        <div class="place-items-center montserrat">
+          <p
+            class="flex font-extrabold text-opacity-55 text-center mt-48 md:mt-10 md:p-24 uppercase text-6xl md:text-[220px] gradient-text"
+          >
+            The Gang
+          </p>
+          <div class="flex flex-col min-w-full text-center k">
+            <p
+              class="text-[20px] md:text-[65px] self-center font-bold w-full text-white"
+            >
+              Meet Awesome People
+            </p>
+            <div class="mt-4 justify-items-center">
+              <img
+                src="images/gradientline.png"
+                alt=""
+                class="items-center h-1 md:h-3 w-fit"
+              />
+              <p
+                class="font-medium md:w-[800px] mt-6 px-4 md:mt-14 text-[12px] md:text-xl text-opacity-75 text-white"
+              >
+                "Meet incredible people and build meaningful connections.
+                Discover stories, share experiences, and grow together."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="absolute right-2 top-14">
+            <img
+              src="images/paralax1.png"
+              alt=""
+              class="w-[180px] md:w-[310px]"
+            />
+          </div>
+          <div class="absolute bottom-5 md:bottom-[-15%] right-0">
+            <img
+              src="images/paralax2.png"
+              alt=""
+              class="w-[150px] md:w-[410px]"
+            />
+          </div>
+          <div class="absolute bottom-[400px] md:bottom-[-30%] left-[-10%]">
+            <img
+              src="images/parralox3.png"
+              alt=""
+              class="w-[100px] md:w-[410px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <img src="images/galleryphoto.png" alt="" class="w-full mt-52 md:mt-2" />
+    </section>
+    <section>
+      <div class="relative">
+        <div
+          class="flex flex-col self-center justify-center gap-1 text-center place-content-center md:text-left md:items-center md:flex-row"
+        >
+          <img
+            src="images/johndoe.png"
+            alt=""
+            class="w-[300px] md:w-[520px] m-auto md:m-0"
+          />
+          <div class="text-white montserrat">
+            <h3 class="text-[26px] md:text-[60px]">John Doe</h3>
+            <p class="text-[18px] md:text-[26px]">Founder & CEO</p>
+            <p
+              class="text-[10px] md:text-[18px] font-light md:w-[600px] px-5 md:px-0 py-5 md:py-6"
+            >
+              Cras convallis lacus orci, tristique tincidunt magna consequat in.
+              In vel pulvinar est, at euismod libero. Quisque ut metus sit amet
+              augue rutrum feugiat.
+            </p>
+            <div class="">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[30px] md:text-[36px] hover:text-[#1877F2] cursor-pointer pr-2 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[30px] md:text-[36px] hover:text-[#0077B5] cursor-pointer pr-2 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[30px] md:text-[36px] hover:text-[#1DA1F2] cursor-pointer pr-2 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[30px] md:text-[36px] hover:text-[#cd486b] cursor-pointer pr-2 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap justify-center grid-flow-row gap-8 mt-10 md:gap-16 md:mt-20"
+        >
+          <div
+            class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center md:flex-row"
+          >
+            <img
+              src="images/person1.png"
+              alt=""
+              class="w-[90px] md:w-[200px] m-auto md:m-0"
+            />
+            <div class="text-white place-content-center montserrat">
+              <h3 class="text-[20px] md:text-[35px]">Jane Doe</h3>
+              <p class="text-[16px] md:text-[18px]">Co-Founder & CTO</p>
+              <p
+                class="text-[8px] md:text-[16px] font-light w-[250px] md:w-[350px] px-5 md:px-0 py-3"
+              >
+                Cras convallis lacus orci, tristique tincidunt magna consequat
+                in. In vel pulvinar est, at euismod libero. Quisque ut metus sit
+                amet augue rutrum feugiat.
+              </p>
+              <div class="">
+                <ion-icon
+                  name="logo-facebook"
+                  class="text-[20px] md:text-[30px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-linkedin"
+                  class="text-[20px] md:text-[30px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-twitter"
+                  class="text-[20px] md:text-[30px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-instagram"
+                  class="text-[20px] md:text-[30px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center md:flex-row"
+          >
+            <img
+              src="images/person2.png"
+              alt=""
+              class="w-[90px] md:w-[200px] m-auto md:m-0"
+            />
+            <div class="text-white place-content-center montserrat">
+              <h3 class="text-[20px] md:text-[35px]">Jim Doe</h3>
+              <p class="text-[16px] md:text-[18px]">
+                Co-Founder & VP of Marketing
+              </p>
+              <p
+                class="text-[8px] md:text-[16px] font-light w-[250px] md:w-[350px] px-5 md:px-0 py-3"
+              >
+                Cras convallis lacus orci, tristique tincidunt magna consequat
+                in. In vel pulvinar est, at euismod libero. Quisque ut metus sit
+                amet augue rutrum feugiat.
+              </p>
+              <div class="">
+                <ion-icon
+                  name="logo-facebook"
+                  class="text-[20px] md:text-[30px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-linkedin"
+                  class="text-[20px] md:text-[30px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-twitter"
+                  class="text-[20px] md:text-[30px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-instagram"
+                  class="text-[20px] md:text-[30px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center md:flex-row"
+          >
+            <img
+              src="images/person3.png"
+              alt=""
+              class="w-[90px] md:w-[200px] m-auto md:m-0"
+            />
+            <div class="text-white place-content-center montserrat">
+              <h3 class="text-[20px] md:text-[35px]">Jim Doe</h3>
+              <p class="text-[16px] md:text-[18px]">VP of Development</p>
+              <p
+                class="text-[8px] md:text-[16px] font-light w-[250px] md:w-[350px] px-5 md:px-0 py-3"
+              >
+                Cras convallis lacus orci, tristique tincidunt magna consequat
+                in. In vel pulvinar est, at euismod libero. Quisque ut metus sit
+                amet augue rutrum feugiat.
+              </p>
+              <div class="">
+                <ion-icon
+                  name="logo-facebook"
+                  class="text-[20px] md:text-[30px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-linkedin"
+                  class="text-[20px] md:text-[30px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-twitter"
+                  class="text-[20px] md:text-[30px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-instagram"
+                  class="text-[20px] md:text-[30px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center md:flex-row"
+          >
+            <img
+              src="images/person4.png"
+              alt=""
+              class="w-[90px] md:w-[200px] m-auto md:m-0"
+            />
+            <div class="text-white place-content-center montserrat">
+              <h3 class="text-[20px] md:text-[35px]">Jim Doe</h3>
+              <p class="text-[16px] md:text-[18px]">VP of Human Resources</p>
+              <p
+                class="text-[8px] md:text-[16px] font-light w-[250px] md:w-[350px] px-5 md:px-0 py-3"
+              >
+                Cras convallis lacus orci, tristique tincidunt magna consequat
+                in. In vel pulvinar est, at euismod libero. Quisque ut metus sit
+                amet augue rutrum feugiat.
+              </p>
+              <div class="">
+                <ion-icon
+                  name="logo-facebook"
+                  class="text-[20px] md:text-[30px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-linkedin"
+                  class="text-[20px] md:text-[30px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-twitter"
+                  class="text-[20px] md:text-[30px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-instagram"
+                  class="text-[20px] md:text-[30px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <img
+            src="images/decorationdots.png"
+            alt=""
+            class="md:w-[450px] w-[80px] absolute top-[38%] -z-10"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="relative">
+      <div
+        class="grid flex-wrap justify-center grid-cols-2 gap-8 my-20 md:my-32 md:grid-cols-4 place-items-center"
+      >
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user7.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Pan He</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Developer
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user10.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Margot</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Marketing
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user8.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Karmegam</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Design & Developer
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user4.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Elisa</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Marketing
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user2.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Jack Doe</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Human Resource
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user3.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Marshal</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Marketing
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user5.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Blake</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Human Resource
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col self-center justify-center gap-3 text-center w-fit place-content-center md:text-left md:items-center"
+        >
+          <img
+            src="images/user6.png"
+            alt=""
+            class="w-[90px] md:w-[150px] m-auto md:m-0"
+          />
+          <div class="text-center text-white place-content-center montserrat">
+            <h3 class="text-[20px] md:text-[30px]">Tinna</h3>
+            <p class="text-[16px] md:text-[16px] font-light text-opacity-50">
+              Designer
+            </p>
+
+            <div class="mt-6">
+              <ion-icon
+                name="logo-facebook"
+                class="text-[20px] md:text-[25px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-linkedin"
+                class="text-[20px] md:text-[25px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-twitter"
+                class="text-[20px] md:text-[25px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="text-[20px] md:text-[25px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-4"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img
+          src="images/oval2.png"
+          alt="oval"
+          class="absolute top-4 md:top-[-20%] right-[0%] w-[150px] md:w-[380px] -z-10"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="relative montserrat my-28">
+        <div
+          class="md:rounded-[50px] bg-[url(images/bgbanner.png)] bg-center bg-cover place-items-center place-self-center md:m-0 p-16 border w-auto md:w-[1200px]"
+        >
+          <h2
+            class="md:text-[30px] md:leading-10 w-[280px] md:w-[700px] text-xl text-center"
+          >
+            We're on the mission to make the public markets work for all people.
+          </h2>
+          <p
+            class="px-8 py-3 mt-10 text-xs font-semibold text-white uppercase bg-black border border-transparent rounded-full cursor-pointer md:text-xl hover:border-black hover:bg-white hover:text-black"
+          >
+            Join with us
+          </p>
+        </div>
+        <div>
+          <img
+            src="images/bgparallax.png"
+            alt="bg"
+            class="md:w-[1000px] w-[500px] md:h-[1000px] absolute top-5 md:top-[-150%] right-1 -z-10"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="flex flex-wrap justify-between px-5 my-3 font-light text-white md:my-10 md:flex-row md:px-14 montserrat"
+      >
+        <div class="order-4 mt-3 md:order-1">
+          <div class="flex gap-2">
+            <img
+              src="images/logo.png"
+              alt="logo"
+              class="h-[20px] md:h-[30px] w-[20px] md:w-[30px]"
+            />
+            <p class="uppercase text-[20px] md:text-[26px] font-semibold">
+              IMAJIN
+            </p>
+          </div>
+          <div class="text-sm md:text-base">
+            <p class="w-[100px] md:w-[250px] my-2 md:my-6">
+              Nam posuere accumsan porta. Integer id orci sed ante tincidunt
+              tincidunt sit amet sed libero.
+            </p>
+            <p class="w-[100px] md:w-full">© Imajin Theme 2023</p>
+          </div>
+        </div>
+        <div class="order-1 mt-3 md:order-2">
+          <p class="font-bold uppercase">COMPANY</p>
+          <ul
+            class="text-sm w-[100px] md:w-full leading-7 md:leading-10 md:text-base"
+          >
+            <li>Donec dignissim</li>
+            <li>Curabitur egestas</li>
+            <li>Nam posuere</li>
+            <li>Aenean facilisis</li>
+          </ul>
+        </div>
+        <div class="order-2 mt-3 md:order-3">
+          <p class="font-bold uppercase">Services</p>
+          <ul
+            class="text-sm leading-7 w-[100px] md:w-full md:leading-10 md:text-base"
+          >
+            <li>Cras convallis</li>
+            <li>Vestibulum faucibus</li>
+            <li>Quisque lacinia purus</li>
+            <li>Aliquam nec ex</li>
+          </ul>
+        </div>
+        <div class="order-3 mt-3 md:order-4">
+          <p class="font-bold uppercase">resources</p>
+          <ul
+            class="text-sm w-[100px] md:w-full leading-7 md:leading-10 md:text-base"
+          >
+            <li>Cras convallis</li>
+            <li>Vestibulum faucibus</li>
+            <li>Quisque lacinia purus</li>
+            <li>Aliquam nec ex</li>
+          </ul>
+        </div>
+        <div class="order-4 mt-3 place-content-center md:order-5">
+          <div class="my-2 md:my-6">
+            <ion-icon
+              name="logo-facebook"
+              class="text-[20px] md:text-[30px] hover:text-[#1877F2] cursor-pointer pr-1 md:pr-2"
+            ></ion-icon>
+            <ion-icon
+              name="logo-linkedin"
+              class="text-[20px] md:text-[30px] hover:text-[#0077B5] cursor-pointer pr-1 md:pr-2"
+            ></ion-icon>
+            <ion-icon
+              name="logo-twitter"
+              class="text-[20px] md:text-[30px] hover:text-[#1DA1F2] cursor-pointer pr-1 md:pr-2"
+            ></ion-icon>
+            <ion-icon
+              name="logo-instagram"
+              class="text-[20px] md:text-[30px] hover:text-[#cd486b] cursor-pointer pr-1 md:pr-2"
+            ></ion-icon>
+          </div>
+          <div
+            class="flex gap-2 h-fit rounded-xl place-items-center bg-[#424242] w-fit px-2 py-1"
+          >
+            <ion-icon
+              name="earth-outline"
+              class="text-[20px] md:text-[25px]"
+            ></ion-icon>
+            <form>
+              <select
+                id="language"
+                name="language "
+                class="text-white text-sm md:text-base bg-[#424242]"
+              >
+                <option value="apple">English-en</option>
+                <option value="banana">Abkhazian-ab</option>
+                <option value="orange">Afrikaans-af</option>
+                <option value="grapes">Akan-ak</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const navlinks = document.querySelector(".navlink");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classlist.toggle("top-[9%]");
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const parallaxImage = document.querySelector(".parallax-image");
+
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+
+        parallaxImage.style.transform = `translate(-50%, -50%) scale(1.1) translate(${
+          x * 20
+        }px, ${y * 20}px)`;
+      });
+    </script>
+  </body>
+</html>
